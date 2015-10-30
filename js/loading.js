@@ -1,3 +1,4 @@
+// To call once the document is loaded
 function loaded() {
 	var letter = $("#loading .letter");
 	// Finding out the block's inclination angle
@@ -21,12 +22,15 @@ function loaded() {
 	});
 }
 
+// First, we display the whole logo
 function displayText() {
 	var logo = $("#loading .logo");
 	var name = $("#loading .name");
+    // Extending the zone to let the rest of the text fit in
 	logo.animate({
 		width: "410px"
 	}, 1500);
+    // After 500ms, start fading the name in
 	window.setTimeout(function() {
 		name.animate({
 			opacity: "1"
@@ -36,11 +40,23 @@ function displayText() {
 	}, 500);
 }
 
+// Secondly, we switch to the website (sections and stuff)
 function displayContent() {
 	var loading_screen = $("#loading");
 	var sections = $("section");
+    // Transitioning to normal display
 	loading_screen.fadeOut(600);
 	window.setTimeout(function() {
 		sections.fadeIn(600);
 	}, 600);
+    rotateText();
+}
+
+
+// Use this function instead of "loaded" to skip all the loading animations
+// Very useful when working on the website
+function skipLoading() {
+    $("#loading").hide();
+    $("section").show();
+    rotateText();
 }

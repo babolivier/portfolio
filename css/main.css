@@ -142,11 +142,27 @@ a:hover {
 /* Head style */
 
 #head {
-	background:#b0b0b0;
+	background:#6AAA94;
 	width:75%;
 	padding-top:10px;
+    padding-bottom:30px;
 	padding-right:12.5%;
 	padding-left:12.5%;
+}
+
+#head h1 {
+    text-align: center;
+    font-size: 300%;
+    color: white;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+#head .subtitle {
+    height: 30px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
 }
 
 /* About style */
@@ -163,15 +179,36 @@ a:hover {
 
 /* Recommendations style */
 
+#recommendations {
+    float: none;
+    height: 100%;
+}
+
+
 #recommendations img {
-	width:8%;
-	float:left;
+    width:8%;
 	margin-right:20px;
 	border-radius:100%;
+}
+
+#recommendations div {
+    height: 150px;   
 }
 
 #recommendations .person {
 	text-align:right;
 	font-style:italic;
 	padding-right:10px;
+}
+
+#recommendations div:nth-child(2n) img {
+	float:left;
+}
+
+#recommendations div:nth-child(2n+1) img {
+	float:right;
+}
+
+#recommendations div:nth-child(2n+1) .person {
+    padding-right: 180px;
 }
