@@ -1,0 +1,56 @@
+#form_contact {
+	width:60%;
+	margin: auto;
+	margin-top:10px;
+}
+
+label {
+	display:block;
+}
+
+#form_div_name {
+
+}
+
+#form_div_mail {
+}
+
+#form_div_copy {
+}
+
+#form_div_button {
+	text-align: right;
+	width: 100%;
+}
+
+#form_div_copy #form_label_copy {
+    display: inline;
+}
+
+#form_div_copy #form_copy {
+	-ms-transform: scale(1.3); /* IE */
+	-moz-transform: scale(1.3); /* FF */
+	-webkit-transform: scale(1.3); /* Safari and Chrome */
+	-o-transform: scale(1.3); /* Opera */
+}
+
+#form_label_message {
+	margin-top: 10px;
+}
+
+#form_div_message #form_message {
+	width: 100%;
+	height: 90px;
+}
+
+.form_done {
+	text-align: center;
+}
+
+#contact_done:first-letter {
+}
+
+input[type="text"], input[type="email"] {
+    height: 30px;
+    width: 100%;
+}

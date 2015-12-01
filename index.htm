@@ -1,130 +1,350 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 	<head>
-		<title>Brendan Abolivier</title>
-		<link rel="stylesheet" href="css/fonts.css">
-		<link rel="stylesheet" href="css/main.css">
+		<title>Brendan Abolivier - Étudiant ingénieur</title>
 		<meta charset="utf-8">
+		<link href='style.css' rel='stylesheet' type='text/css'>
+		<link href='form.css' rel='stylesheet' type='text/css'>
 		<link rel="icon" href="favicon.ico" />
-	    <script src="js/jquery-2.1.4.min.js"></script>
-		<script src="js/swappingtext.js"></script>
-		<script src="js/loading.js"></script>
-		<!-- Well, maybe we'll need this one day
-		<script src="js/lang.js"></script>
-		-->
-		<script src="js/main.js"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,400,300,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,200,300' rel='stylesheet' type='text/css'>
+  		<meta property="og:description" content="Venez découvrir le portfolio de Brendan Abolivier, étudiant ingénieur à l'école ISEN de Brest. Ici, vous allez pouvoir prendre connaissance de ses projets, ses expériences et ses compétences." />
+  		<meta property="og:url" content="http://www.brendanabolivier.com/" />
+  		<meta property="og:site_name" content="Brendan Abolivier - Étudiant Ingénieur"/>
+		<meta property="og:image" content="http://host.brendanabolivier.com/files/54f5a819a9bba.jpg" />
+  		<meta property="og:title" content="Brendan Abolivier - Étudiant Ingénieur" />
+  		<meta name="description" content="Venez découvrir le portfolio de Brendan Abolivier, étudiant ingénieur à l'école ISEN de Brest. Ici, vous allez pouvoir prendre connaissance de ses projets, ses expériences et ses compétences." />
+  		<meta name="author" content="Brendan Abolivier" />
+  		<meta name="identifier-url" content="http://www.brendanabolivier.com/" />
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+		<!-- BEGIN VERTICAL TIMELINE LINKS -->
+		<link rel="stylesheet" href="vertical-timeline/css/style.css"> <!-- Resource style -->
+		<script src="vertical-timeline/js/modernizr.js"></script> <!-- Modernizr -->
+		<!-- END VERTICAL TIMELINE LINKS -->
+
+		<script src="scroll.js"></script>
+
+
+		<!-- Piwik -->
+		<script type="text/javascript">
+		  var _paq = _paq || [];
+		  _paq.push(['trackPageView']);
+		  _paq.push(['enableLinkTracking']);
+		  (function() {
+		    var u="//analytics.trancendances.fr/piwik/";
+		    _paq.push(['setTrackerUrl', u+'piwik.php']);
+		    _paq.push(['setSiteId', 4]);
+		    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+		    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+		  })();
+		</script>
+		<noscript><p><img src="//analytics.trancendances.fr/piwik/piwik.php?idsite=4" style="border:0;" alt="" /></p></noscript>
+		<!-- End Piwik Code -->
+
 	</head>
 	<body>
-		<div id="loading">
+		<div id="top"></div>
+		<section id="head">
 			<div class="logo">
 				<div class="letter">B</div>
 				<div class="name">Brendan<br />Abolivier</div>
 			</div>
-		</div>
-		<section id="navbar">
-			<a href="#head">
-				<div class="logo">
-					<div class="letter">B</div>
-					<div class="name">Brendan<br />Abolivier</div>
+		</section>
+		<section id="whoami">
+			<h1>Qui suis-je ?</h1>
+			<div class="whoami-cont">
+				<div class="whoami-pic">
+					<img src="http://host.brendanabolivier.com/files/560ce286ae1f3.jpg" />
 				</div>
-			</a>
-			<ul>
-				<li><a onClick="return false" href="#about">about:me</a></li>
-				<li><a onClick="return false" href="#recommendations">Recommendations</a></li>
-				<li><a onClick="return false" href="#experiences">Experiences</a></li>
-				<li><a onClick="return false" href="#projects">Projects</a></li>
-				<li><a onClick="return false" href="#skills">Skills</a></li>
-				<li><a onClick="return false" href="#contact">Contact</a></li>
-			</ul>
-		</section>
-		<section id="placeholder"></section>
-		<section id="head">
-			<h1>Brendan Abolivier</h1>
-			<div class="subtitle"></div>
-		</section>
-		<section id="about">
-			<h2>about:me</h2>
-			<div class="photo"></div>
-			<p>Hey there!<br>
-			My name is Brendan Abolivier, and I'm a French student at <a href="http://www.isen.fr/">ISEN</a>, an engineering school located in Brest (France), where I mainly study software engineering.<br>
-			I'm a very curious guy, in every sense of the word. I love programming, systems administration, networks management, but I also have many interests outside of the IT field. I have some experience in volunteering, in music production, radio production, management... I'm even the co-founder (and current president) of a music-centered organisation named <a href="http://www.trancendances.fr/">Trancendances</a>!<br>
-			I'm very interested in discovering new people and practices (I love attending to conferences), new aspects of the fields I'm already playing in, or even new domains I don't have any relation with.<br>
-			Back to IT, I've always been curious about how these new technologies we're living with more and more are working and interacting with our lifestyle. I also am involved in open-source communities, actively contributing to free software projects such as <a href="https://www.cozy.io/">Cozy</a>.<br>
-			I hope you will be able to discover me during your browsing of this website, so have a pleasant one!</p>
-		</section>
-		<section id="recommendations">
-			<h2>Recommendations</h2>
-			<div>
-				<img src="assets/people/frankrousseau.jpg" alt="Frank Rousseau" />
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				<p class="person">Frank Rousseau - CTO, Cozy Cloud</p>
+				<div class="whoami-txt">
+					<p>Bonjour, et bienvenue,</p>
+					<p>Je suis un jeune étudiant brestois, actuellement en troisième année de Cycle Informatique et Réseaux de l'ISEN de Brest. Je me passionne pour les nouvelles technologies, notamment les technologies de l'information et leurs évolutions.</p>
+					<p>Vous trouverez sur ce site tout ce qu'il vous faut pour mieux me connaître, découvrir ce que je fais, me contacter et plus si affinités.</p>
+					<p>Curieux et impliqué, je poursuis actuellement une formation par contrat de professionalisation dans l'entreprise <a href="https://www.thomson-networks.com/">Thomson Video Networks</a>.</p>
+				</div>
 			</div>
-            <div>
-				<img src="assets/people/tristannitot.jpg" alt="Tristan Nitot" />
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				<p class="person">Tristan Nitot - C3PO, Cozy Cloud; Founder, Mozilla Europe</p>
-			</div>
+		</section>
+		<section id="competences">
+			<h1>Compétences</h1>
+			<h2>Programmation Web</h2>
+			<table>
+				<tr>
+					<td><img src="logos_competences/PHP.png" width="150" /></td>
+					<td><img src="logos_competences/HTML5.png" width="150" /></td>
+					<td><img src="logos_competences/CSS3.png" width="150" /></td>
+					<td><img src="logos_competences/JS.png" width="150" /></td>
+					<td><img src="logos_competences/JQUERY.png" width="150" /></td>
+					<td><img src="logos_competences/NODE.png" width="150" /></td>
+				</tr>
+				<tr>
+					<td>PHP</td>
+					<td>HTML5</td>
+					<td>CSS3</td>
+					<td>JavaScript</td>
+					<td>JQuery</td>
+					<td>Node.js</td>
+				</tr>
+			</table>
+			
+			<h2>Programmation logicielle</h2>
+			<table>
+				<tr>
+					<td><img src="logos_competences/C.png" width="150" /></td>
+					<td><img src="logos_competences/C++.png" width="150" /></td>
+					<td><img src="logos_competences/JAVA.png" width="150" /></td>
+				</tr>
+				<tr>
+					<td>C</td>
+					<td>C++</td>
+					<td>Java</td>
+				</tr>
+			</table>
+			
+			<h2>Systèmes et réseaux</h2>
+			<table>
+				<tr>
+					<td><img src="logos_competences/LINUX.png" width="150" /></td>
+					<td><img src="logos_competences/WINDOWS.png" width="150" /></td>
+					<td><img src="logos_competences/CISCO.png" width="150" /></td>
+					<td><img src="logos_competences/APACHE.png" width="150" /></td>
+				</tr>
+				<tr>
+					<td>Linux (Debian/Archlinux)</td>
+					<td>Windows</td>
+					<td>CCNA (1 &amp; 2)</td>
+					<td>Apache HTTP Server</td>
+				</tr>
+			</table>
+
+			<h2>Bases de données</h2>
+			<table>
+				<tr>
+					<td><img src="logos_competences/MYSQL.png" width="150"></td>
+					<td><img src="logos_competences/ORACLE.png" width="150"></td>
+					<td><img src="logos_competences/CASSANDRA.png" width="150"></td>
+					<td><img src="logos_competences/COUCHDB.png" width="150"></td>
+				</tr>
+				<tr>
+					<td>MySQL</td>
+					<td>Oracle</td>
+					<td>Cassandra</td>
+					<td>CouchDB</td>
+				</tr>
+			</table>
+			<p>Tous les logos présentés dans cette section appartiennent à leurs propriétaires respectifs.</p>
 		</section>
 		<section id="experiences">
-			<h2>Experiences</h2>
-			<article>
-				<img src="assets/companies/cozy.svg" alt="Cozy Cloud" />
-				<h3>Cozy Cloud</h3>
-				<p class="subtitle">2015 - Intern</p>
-				<p class="description">I have worked ten weeks as an intern in the start-up Cozy Cloud, during which I worked on a Node.JS application for the Cozy platform.</p>
-			</article>
-			<article>
-				<img src="assets/companies/secourspop.png" alt="Secours populaire français" />
-				<h3>Secours populaire français</h3>
-				<p class="subtitle">2014 - Intern</p>
-				<p class="description">I joined the team of volunteers at the non-profit organisation "Secours populaire français" for two weeks. I was in charge of a vacation day for the people not able to afford going on holiday.</p>
-			</article>
-			<article>
-				<img src="assets/companies/isen.png" alt="Trancendances" />
-				<h3>ISEN Brest</h3>
-				<p class="subtitle">2013-present - Student</p>
-				<p class="description">I am studying engineering sciences and IT at the engineering school ISEN Brest. I am currently completing my third year in the "Cycle Informatique et Réseaux" (french for "IT and Networking Cycle") curriculum.</p>
-			</article>
-			<article>
-				<img src="assets/companies/trancendances.png" alt="Trancendances" />
-				<h3>Trancendances</h3>
-				<p class="subtitle">2011-present - President/Founder</p>
-				<p class="description">I founded the non-profit organisation Trancendances, acting to share and popularise trance music, together with Killian Frelaut. I also manage external relationships, and the organisation's technical service.</p>
-			</article>
+			<h1>Expériences</h1>
+			<div id="cd-timeline" class="cd-container">
+				<div class="cd-timeline-block">
+					<div class="cd-timeline-img cd-picture">
+					</div> <!-- cd-timeline-img -->
+
+					<div class="cd-timeline-content">
+						<h2>Game of CIR</h2>
+						<p>Participation à au concours "Game of CIR" organisé par l'ISEN Brest/Rennes du 4 au 13 mai 2015 au sein d'une équipe de 5 personnes. Durant ce concours, nous avons développé un jeu de plateforme en HTML5/CSS3 et JavaScript (en utilisant le framework Phaser) reprenant le thème de Bomberman. A l'issue de ce concours, notre application est arrivée première et notre équipe a remporté la somme de 250€.</p>
+						<a href="http://evanguelard.fr/BomberCIR/" class="cd-read-more" target="_blank">En savoir plus</a>
+						<span class="cd-date">Mai 2015</span>
+					</div> <!-- cd-timeline-content -->
+				</div> <!-- cd-timeline-block -->
+
+				<div class="cd-timeline-block">
+					<div class="cd-timeline-img cd-location">
+					</div> <!-- cd-timeline-img -->
+
+					<div class="cd-timeline-content">
+						<h2>Déclaration d'une association</h2>
+						<p>Déclaration de l'association loi 1901 répondant au nom "Trancendances", ayant pour objectif de populariser la musique trance à travers la France. J'y occupe les fonctions de président, producteur et responsable technique.</p>
+						<a href="http://www.trancendances.fr" class="cd-read-more" target="_blank">En savoir plus</a>
+						<span class="cd-date">Décembre 2014</span>
+					</div> <!-- cd-timeline-content -->
+				</div> <!-- cd-timeline-block -->
+
+				<div class="cd-timeline-block">
+					<div class="cd-timeline-img cd-movie">
+					</div> <!-- cd-timeline-img -->
+
+					<div class="cd-timeline-content">
+						<h2>Stage associatif</h2>
+						<p>Stage de deux semaines au Secours Populaire du Finistère (Brest). Mission orientée sur l'organisation de la journée annuelle dite "des oubliés des vacances", supervision de la communication par le personnel bénévole, gestion des inscriptions.</p>
+						<span class="cd-date">Juillet 2014</span>
+					</div> <!-- cd-timeline-content -->
+				</div> <!-- cd-timeline-block -->
+
+				<div class="cd-timeline-block">
+					<div class="cd-timeline-img cd-picture">
+					</div> <!-- cd-timeline-img -->
+
+					<div class="cd-timeline-content">
+						<h2>Fin de "CIR1"</h2>
+						<p>Fin de la première année de Cycle Informatique et Réseaux (CIR1) à l'ISEN Brest, se terminant par l'accomplissement d'un projet de programmation et d'algorithmique en C, celui d'un projet de développement Web (voir page "Projets"), et l'obtention du module Cisco CCNA1.</p>
+						<span class="cd-date">Juin 2014</span>
+					</div> <!-- cd-timeline-content -->
+				</div> <!-- cd-timeline-block -->
+
+				<div class="cd-timeline-block">
+					<div class="cd-timeline-img cd-picture">
+					</div> <!-- cd-timeline-img -->
+
+					<div class="cd-timeline-content">
+						<h2>Obtention du Voltaire</h2>
+						<p>Validation du niveau "Orthographe Professionnelle" certifié par la certification Voltaire, avec un score de 668 points.</p>
+						<a href="http://www.certificat-voltaire.fr/orthographe-recruteur?code=WFXP6C" class="cd-read-more" target="_blank">En savoir plus</a>
+						<span class="cd-date">Mai 2014</span>
+					</div> <!-- cd-timeline-content -->
+				</div> <!-- cd-timeline-block -->
+
+				<div class="cd-timeline-block">
+					<div class="cd-timeline-img cd-movie">
+					</div> <!-- cd-timeline-img -->
+
+					<div class="cd-timeline-content">
+						<h2>Réalisation d'un court-métrage</h2>
+						<p>Dans le cadre de mes études à l'ISEN, réalisation du court-métrage "Out of time" sur la thématique "le temps vécu". Plus d'informations sur la page "Projets".</p>
+						<a href="https://www.youtube.com/watch?v=x2YOzcdB2HA" class="cd-read-more" target="_blank">Visionner</a>
+						<span class="cd-date">Mai 2014</span>
+					</div> <!-- cd-timeline-content -->
+				</div> <!-- cd-timeline-block -->
+
+				<div class="cd-timeline-block">
+					<div class="cd-timeline-img cd-picture">
+					</div> <!-- cd-timeline-img -->
+					<div class="cd-timeline-content">
+						<h2>Baccalauréat Scientifique</h2>
+						<p>Obtention du baccalauréat scientifique (filière Sciences de l'Ingénieur) avec mention Assez Bien et mention européenne.</p>
+						
+						<span class="cd-date">Juillet 2013</span>
+					</div> <!-- cd-timeline-content -->
+				</div> <!-- cd-timeline-block -->
+
+				<div class="cd-timeline-block">
+					<div class="cd-timeline-img cd-picture">
+					</div> <!-- cd-timeline-img -->
+
+					<div class="cd-timeline-content">
+						<h2>Obtention du First Certificate of Cambridge (Grade C)</h2>
+						<p>Validation d'un niveau d'anglais équivalent au niveau B2 via le First Certificate délivré par l'université britannique de Cambridge.</p>
+						<span class="cd-date">2013</span>
+					</div> <!-- cd-timeline-content -->
+				</div> <!-- cd-timeline-block -->
+
+				<div class="cd-timeline-block">
+					<div class="cd-timeline-img cd-movie">
+					</div> <!-- cd-timeline-img -->
+
+					<div class="cd-timeline-content">
+						<h2>Stage d'observation à DCNS</h2>
+						<p>Stage d'observation en entreprise de trois jours effectué au Centre des Services Applicatifs de l'entreprise DCNS (Brest).</p>
+						<span class="cd-date">2010</span>
+					</div> <!-- cd-timeline-content -->
+				</div> <!-- cd-timeline-block -->
+
+				<div class="cd-timeline-block">
+					<div class="cd-timeline-img cd-location">
+					</div> <!-- cd-timeline-img -->
+
+					<div class="cd-timeline-content">
+						<h2>Débuts en radio</h2>
+						<p>Début de mon expérience radiophonique, à l'époque en tant qu'intervenant dans l'émission mensuelle Dimension Ados.</p>
+						<a href="http://dragavnir.tumblr.com/post/63277744680/the-radio-boy" class="cd-read-more" target="_blank">En savoir plus</a>
+						<span class="cd-date">Décembre 2009</span>
+					</div> <!-- cd-timeline-content -->
+				</div> <!-- cd-timeline-block -->
+			</div>
 		</section>
 		<section id="projects">
-			<h2>Projects</h2>
+			<h1>Projets</h1>
 			<article>
-				<img src="assets/projects/burgerquizz.jpg" alt="Burger Quizz" />
+				<a href="http://burgerquizz.brendanabolivier.com/" target="_blank"><img src="projets/burgerquizz.jpg" width="150" /></a>
 				<h3>Burger Quizz</h3>
-				<div class="description">
-					<p>As a school project, we had to work, in groups of two, on a web adaptation of "Burger Quizz", an old TV game. I worked with <a href="http://www.josephcaillet.fr/">Joseph Caillet</a> on this application, written in HTML5, CSS3 and JavaScript, with a JSON API written in PHP, a Node.JS script handling the multiplayer mode, and a Java application managing the database's content.</p>
-					<a href="http://burgerquizz.brendanabolivier.com/">Try it</a>
-					<a href="https://github.com/babolivier/burger-quizz">View on Github</a>
-				</div>
+				<p>En binôme, réalisation d'une application Web inspirée du jeu télévisé éponyme Burger Quizz, dans le cadre du projet de fin de seconde année de Cycle Informatique et Réseaux. L'application est développée en HTML5, CSS3 et JavaScript/jQuery, et est accompagnée d'une API JSON en PHP, ainsi que d'une application Node.js pour le mode multijoueur et un programme en Java pour la gestion du contenu de la base de questions.</p>
+				<p><a href="http://burgerquizz.brendanabolivier.com/" target="_blank">Voir le résultat final</a></p>
 			</article>
-			<article>
-				<img src="assets/projects/bombercir.jpg" alt="BomberCIR" />
+			
+			<article style="margin-bottom:0px;">
+				<a href="http://evanguelard.fr/BomberCIR/" target="_blank"><img src="projets/bombercir.jpg" width="150" /></a>
 				<h3>BomberCIR</h3>
-				<div class="description">
-					<p>With four of my classmates, we created a web platform game inspired by Bomberman for the "Game of CIR" contest organised by our school (ISEN Brest), which aimed in showing the skills brought by the CIR (Cycle Informatique et Réseaux) curriculum, which is mainly focused on IT and networking. The game is written in HTML5, CSS3 and JavaScript, and is based on the Phaser JavaScript framework. It also comes with a Java application acting as an initiation to computer programming. Our game reached the first place in the contest, with a €250 prize.</p>
-					<a href="http://evanguelard.fr/BomberCIR/">Try and download the game</a>
-				</div>
+				<p>Dans le cadre du concours "Game of CIR" organisé par l'ISEN Brest/Rennes, réalisation d'un jeu de plateforme en HTML5/CSS3 et en JavaScript utilisant le framework Phaser. Sur le thème du jeu Bomber Man, il a pour objectif de montrer les compétences de la filière CIR (Cycle Informatique et Réseaux), et est accompagné par une application en Java proposant une initiation à la programmation. Le projet a remporté la première place du concours, et un prix d'une valeur de 250€.</p>
+				<p><a href="http://evanguelard.fr/BomberCIR/" target="_blank">Voir le résultat final</a></p>
 			</article>
+
 			<article>
-				<img src="assets/projects/newsletter.jpg" alt="Newsletter sending system" />
-				<h3>Newsletter sending system</h3>
-				<div class="description">
-					<p>Trancendances started its newsletter service in January 2015, which needed to be sent automatically to the subscribers. I wrote this system in PHP, with the PEAR librairies, and support of multipart emails (HTML+plain text) and secured and encrypted SMTP authentication. I also had to design a simple but efficient mail template which is used for every newsletter, written in HTML and CSS, with compatibility for the most used e-mail clients.</p>
-					<a href="http://mailing.trancendances.fr/archives/">Read some newsletters</a>
-				</div>
+				<a href="http://mailing.trancendances.fr/archives/" target="_blank"><img src="projets/newsletter-trancendances.jpg" width="150" /></a>
+				<h3>Système d'envoi de newsletter</h3>
+				<p>Conception des newsletter de l'association Trancendances, incluant la conception et la réalisation d'un template général, l'étude du comportement des principaux clients e-mail afin d'en déduire les techniques à utiliser, et la réalisation du système d'envoi automatisé des lettres d'informations en utilisant une connexion SMTP sécurisée.</p>
+				<p><a href="http://mailing.trancendances.fr/archives/" target="_blank">Voir le résultat final</a></p>
 			</article>
-		</section>
-		<section id="skills">
-			<h2>Skills</h2>
+			
+			<article style="margin-bottom:0px;">
+				<a href="http://www.trancendances.fr/agenda" target="_blank"><img src="projets/agenda-tr.jpg" width="150" /></a>
+				<h3>Agenda de soirées "trance"</h3>
+				<p>Afin d'intégrer la bulle événementielle mais également d'avancer vers son objectif de popularisation de la musique trance dans l'hexagone, l'association Trancendances nécessitait le développement d'un agenda répertoriant plusieurs événements en France couvrant ce genre musical. Cet agenda fut développé en utilisant le <em title="Content Management System">CMS</em> déjà en place (AnchorCMS), il a donc nécessité un travail de documentation et d'adaptation sur ce service.</p>
+				<p><a href="http://www.trancendances.fr/agenda" target="_blank">Voir le résultat final</a></p>
+			</article>
+
+			<article>
+				<a href="http://p-and-q.brendanabolivier.com/" target="_blank"><img src="projets/pandq.jpg" width="150" /></a>
+				<h3>P &amp; Q</h3>
+				<p>A la fin de notre première année de Cycle Informatique et Réseaux à l'ISEN Brest, nous nous sommes vu confiés, par binômes, la réalisation du site Internet (statique) d'une start-up fictive. La start-up concernée ici se nomme P &amp; Q (Paper &amp; Quality) et se spécialise dans la production et la commercialisation de papier toilette haut de gamme.</p>
+				<p><a href="http://p-and-q.brendanabolivier.com/" target="_blank">Voir le résultat final</a></p>
+			</article>
+			
+			<article>
+				<a href="http://www.afm29.com/" target="_blank"><img src="projets/afm29.jpg" width="150" /></p></a>
+				<h3>AFM 29</h3>
+				<p>J'ai été contacté par la société de dépannage informatique AFM 29 (Assistance Finistère Micro) pour la réalisation d'un site Internet. Ce dernier a été développé en partant d'une installation d'AnchorCMS, un système de gestion de contenu léger. Le but était de fournir un site simple et léger, en permettant au client d'en modifier les informations facilement (panel de gestion).</p>
+				<p><a href="http://www.afm29.com/" target="_blank">Voir le résultat final</a></p>
+			</article>
+
+			<article style="margin-bottom:35px;">
+				<a href="https://www.youtube.com/watch?v=x2YOzcdB2HA" target="_blank"><img src="projets/outoftime.jpg" width="150" /></a>
+				<h3>Out of time</h3>
+				<p>Out of time est un court-métrage réalisé par un groupe de sept étudiants de première année en Cycle Informatique et Réseaux, sur le thème "le temps vécu". Le message véhiculé par ce court-métrage est que le jeu, et pas seulement le jeu vidéo, est du temps vécu indirectement par le biais de ce jeu, presque par "procuration".</p>
+				<p><a href="https://www.youtube.com/watch?v=x2YOzcdB2HA" target="_blank">Voir le résultat final</a></p>
+			</article>
+
+
+			<article>
+				<img src="projets/robot-cir1.jpg" width="150" />
+				<h3>Robot pompier</h3>
+				<p>Dans le cadre de notre projet algorithmique de fin de première année de Cycle Informatique et Réseaux, nous avons été amené à développer une simulation de robot pompier. Ce robot devait pouvoir intervenir en cas d'incendie dans un apparement, connaissant à l'avance le plan de ce dernier et la position d'un extincteur, mais devant localiser la position du feu de lui-même.</p>
+			</article>
 		</section>
 		<section id="contact">
+			<h1>Me contacter</h1>
+			<table>
+				<tr>
+					<td>Numéro de portable : </td>
+					<td>+33 (0)7 64 08 55 60</td>
+				</tr>
+				<tr>
+					<td>Adresse e-mail : </td>
+					<td>brendan.abolivier@isen-bretagne.fr<br />
+						contact@brendanabolivier.com</td>
+				</tr>
+			</table>
+			<div id="form_contact"></div>
+			<script type="text/javascript" src="http://service.captainform.io/js.php?key=55519f6d990b8&amp;lang=fr" ></script> 
+			<p>Formulaire généré par les copains de <a href="http://www.captainform.io/">Captain Form</a>, passez donc leur dire bonjour !</p>
+          
+
 		</section>
+		<div>
+			<ul id="navbar">
+				<li class="head">Accueil</li>
+				<li class="whoami">Qui suis-je ?</li>
+				<li class="competences">Compétences</li>
+				<li class="experiences">Expériences</li>
+				<li class="projects">Projets</li>
+				<li class="contact">Me contacter</li>
+				<li class="cv"><a href="http://static.brendanabolivier.com/cv.pdf" target="_blank">CV</a></li>
+			</ul>
+		</div>
+		<script src="vertical-timeline/js/main.js"></script> <!-- Resource jQuery -->
 	</body>
 </html>
