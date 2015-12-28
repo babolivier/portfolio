@@ -227,10 +227,11 @@ a:hover {
 
 #experiences article img {
     width:100%;
-    height:100%;
 }
 
 #experiences article div {
    /* I'm containing an image! */
     height: 200px; /* Fixed height so the text is at the same level for each block */
+    display: table-cell;
+    vertical-align: middle;
 }
