@@ -217,10 +217,10 @@ a:hover {
 /* Experiences style */
 
 #experiences article {
-    width:23%;
+    width:22.1%;
     display:inline-block;
-    margin-left:10px;
-    margin-right:10px;
+    margin-left:1%;
+    margin-right:1%;
     vertical-align:top;
     text-align:center;
 }
