@@ -7,6 +7,7 @@
 		<meta charset="utf-8">
 		<link rel="icon" href="favicon.ico" />
 	    <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
 		<script src="js/swappingtext.js"></script>
 		<script src="js/loading.js"></script>
 		<!-- Well, maybe we'll need this one day
@@ -68,31 +69,46 @@
 		</section>
 		<section id="experiences">
 			<h2>Experiences</h2>
-			<article>
-				<div><img src="assets/companies/cozy.svg" alt="Cozy Cloud" /></div>
-				<h3>Cozy Cloud</h3>
-				<p class="subtitle">2015 - Intern</p>
-				<p class="description">I have worked ten weeks as an intern in the start-up Cozy Cloud, during which I worked on a Node.JS application for the Cozy platform.</p>
-			</article>
-			<article>
-				<div><img src="assets/companies/secourspop.png" alt="Secours populaire français" /></div>
-				<h3>Secours populaire français</h3>
-				<p class="subtitle">2014 - Intern</p>
-				<p class="description">I joined the team of volunteers at the non-profit organisation "Secours populaire français" for two weeks. I was in charge of a vacation day for the people not able to afford going on holiday.</p>
-			</article>
-			<article>
-				<div><img src="assets/companies/isen.png" alt="Trancendances" /></div>
-				<h3>ISEN Brest</h3>
-				<p class="subtitle">2013-present - Student</p>
-				<p class="description">I am studying engineering sciences and IT at the engineering school ISEN Brest. I am currently completing my third year in the "Cycle Informatique et Réseaux" (french for "IT and Networking Cycle") curriculum.</p>
-			</article>
-			<article>
-				<div><img src="assets/companies/trancendances.png" alt="Trancendances" /></div>
-				<h3>Trancendances</h3>
-				<p class="subtitle">2011-present - President/Founder</p>
-				<p class="description">I founded the non-profit organisation Trancendances, acting to share and popularise trance music, together with Killian Frelaut. I also manage external relationships, and the organisation's technical service.</p>
-			</article>
-		</section>
+            <div class="line">
+   		    	<article>
+    				<div><img src="assets/companies/tvn.png" alt="Thomson Video Networks" /></div>
+    				<h3>Thomson Video Networks</h3>
+    				<p class="subtitle">2015-present - Part-time intern</p>
+                    <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#descTVN" aria-expanded="false" aria-controls="descTVN">More infos</button>
+    				<p class="collapse" id="descTVN">In the context of my studies, I'm currently working as a part-time intern at Thomson Video Networks, one of the leader for video and audio processing. During this internship, I'm working on format conversion for video feeds.</p>
+	    		</article>
+    			<article>
+	    			<div><img src="assets/companies/cozy.svg" alt="Cozy Cloud" /></div>
+		    		<h3>Cozy Cloud</h3>
+	    			<p class="subtitle">2015 - Intern</p> 
+                    <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#descCozy" aria-expanded="false" aria-controls="descCozy">More infos</button>
+	    			<p class="collapse" id="descCozy">I have worked ten weeks as an intern in the start-up Cozy Cloud, during which I worked on a Node.JS application for the Cozy platform.</p>
+    			</article>
+	    		<article>
+	    			<div><img src="assets/companies/secourspop.png" alt="Secours populaire français" /></div>
+	    			<h3>Secours populaire français</h3>
+	    			<p class="subtitle">2014 - Intern</p>
+                    <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#descSP" aria-expanded="false" aria-controls="descSP">More infos</button>
+	    			<p class="collapse" id="descSP">I joined the team of volunteers at the non-profit organisation "Secours populaire français" for two weeks. I was in charge of a vacation day for the people not able to afford going on holiday.</p>
+			    </article>
+            </div>
+            <div class="line">
+   		    	<article>
+    				<div><img src="assets/companies/isen.png" alt="ISEN" /></div>
+    				<h3>ISEN Brest</h3>
+    				<p class="subtitle">2013-present - Student</p>
+                    <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#descISEN" aria-expanded="false" aria-controls="descISEN">More infos</button>
+    				<p class="collapse" id="descISEN">I am studying engineering sciences and IT at the engineering school ISEN Brest. I am currently completing my third year in the "Cycle Informatique et Réseaux" (french for "IT and Networking Cycle") curriculum.</p>
+	    		</article>
+	    		<article>
+	    			<div><img src="assets/companies/trancendances.png" alt="Trancendances" /></div>
+	    			<h3>Trancendances</h3>
+	    			<p class="subtitle">2011-present - President/Founder</p>
+                    <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#descTrancendances" aria-expanded="false" aria-controls="descTrancendances">More infos</button>
+	    			<p class="collapse" id="descTrancendances">I founded the non-profit organisation Trancendances, acting to share and popularise trance music, together with Killian Frelaut. I also manage external relationships, and the organisation's technical service.</p>
+	    		</article>
+            </div>
+	    </section>
 		<section id="projects">
 			<h2>Projects</h2>
 			<article>
