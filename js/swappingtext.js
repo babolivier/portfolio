@@ -1,18 +1,18 @@
 // Want to add a line? Just add a row in the table
 var subtitles = [
         "Archlinux lover",
-		"Long-time sysadmin",
-		"Beloved whovian",
+        "Long-time sysadmin",
+        "Beloved whovian",
         "Open-Source contributor",
         "Marvel fanboy",
-		"Privacy warrior",
-		"Allons-y!",
+        "Privacy warrior",
+        "Allons-y!",
         "Trancendances's overlord",
-		"Software developper",
-		"Proud Cozynaute",
-		"What are the round things?",
-		"Wonderland seeker",
-		"Faders pusher"
+        "Software developper",
+        "Proud Cozynaute",
+        "What are the round things?",
+        "Wonderland seeker",
+        "Faders pusher"
     ];
 
 // We need to have this variable global in order for rotateText() to
