@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/brenabolivier
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.brendanabolivier.com
+  * I am brenabolivier (https://keybase.io/brenabolivier) on keybase.
+  * I have a public key with fingerprint E1D4 B745 7A82 9D77 1FBA  8CAC E860 1572 74A2 8D7E
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.8"
+        },
+        "key": {
+            "fingerprint": "e1d4b7457a829d771fba8cace860157274a28d7e",
+            "host": "keybase.io",
+            "key_id": "E860157274A28D7E",
+            "uid": "d7fa52975af18997591522ae9bb18819",
+            "username": "brenabolivier"
+        },
+        "merkle_root": {
+            "ctime": 1433334936,
+            "hash": "e1bc9085262e41952ee54916b4bec87c6defd5f833d3fdcb1f54cef4c1e601eac8f93262ab3c135dd78f95df7323b24add8c2e277a5d55904c00dd7a9eee9ae1",
+            "seqno": 237961
+        },
+        "service": {
+            "hostname": "www.brendanabolivier.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1433334970,
+    "expire_in": 157680000,
+    "prev": "1c20538b50f383cbcc83bc82db2276144cdce822d4b2e60ad83c8f1526cc7075",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFdUm9oVWUYv3dNzcmg/JKYxDhmfnBdzvue8573PVuB6YY4FfuyYGlc3j/P2c52
+7zm3c87uddhUAkUpolQ2Q5fg7A900dZyQYGBUX2QyZBNP0Ql/knEhQgOoSh7z2Vl
++X55//2e3/P7Pc/zbuNjmbrsO3dfXtR1f+HK7PlbItMZ3PtqpyFCNWC07DRkwYcg
+SU8BL4LRYvTBgOAx5PywKQgV5HrjpnlMs1GGKPbDQKPMHM0xY7A5hafBnh90Q1SK
+/JTLAKRsQW1COcOuohR5gjPJJTDHRIRianPMFAVN2RPGyf+yGjXOvK/0a/u/+Jcw
+a6Pt+q+/9qGoxwl2KeEeYq7eXUQw5uAKgRhDbgqMIZq3JCIIuAgLftmHKBVdhKiv
+APkoDGvOZeKnOGRbetmu5WhZPO6pGRHSNRnBDgYbuQQDENtFjrAFSEalo8BTxGOW
+pSxPSYE8YkvwbIlAKwcumedaOpgLSyKLKEX1A1EetbAlsM2VYhIDppQTRYhr2tI0
+NYi7AOByQNpHDK8HodGCLeo6aDC9R2VfQqo7rd28xUqlkkttKv7QaU6GRU1QisIk
+lGFBo3qS5GypJa1AMlCqhYHIzxPmhR8o3cX/tjnN90hxqNlswI6SH0HeTxGEOszU
+K80DZU2JJDaJxQQxPYtZUkjJLCEZVgJj6iDblkrPAcZ6QrAuElcaxDzdPkdKalLy
+0LKrZfJuTRn73QFP+iMwBg9kV9RnsnWZhQvq0jnONCx+4p/hvvn0or/IyA+nR6u7
+pl4t9G/+7sOPiy+eLO2+8k3+y4PDmfFg9tyeV1D9891jX+R3bDqW6zsUjXf88n3n
+433Tm35qPPHGma6nbm2Y2d52der9FXcO0t4bxZvXbrx2bP/EpTG5bHvnjwuWdgQT
+Xw99NpTddnLu7PD0wN7G9sqVyzPJyAd72ja8Nbvuj/VxRzN+cKrh3un414a2kanP
+x49+u+7n/UuPly6MTfZuKW+7+ODcZPup5c5d++0JtKbSNXq+vnV8Yqb+anZubsmy
+22ZDdWXj6sGmE62/Xzi89snNqw79lr0/+5w6Mzr53lZ6ZNeqkdZM9sjaLdOfyOFP
+8dAzL1T/fHPjR9UD15PWnuq+Nc/y238D
+=ajPo
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/brenabolivier
+
+==================================================================
