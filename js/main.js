@@ -1,4 +1,4 @@
-$(document).ready(loaded);
+$(window).on("load", loaded);
 
 // When working on the portfolio, use this function to skip the loader
 //$(document).ready(skipLoading);
@@ -7,7 +7,7 @@ $(document).ready(loaded);
 // on a link in the navbar
 $(document).on("click", "#navbar a", function() {
 	$('html, body').animate(
-        { 
+        {
             scrollTop: $($(this).attr("href")).offset().top - 100
         }
     , 750);
