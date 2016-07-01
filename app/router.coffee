@@ -2,6 +2,7 @@ HeaderView = require 'views/header-view'
 HomeView = require 'views/home-view'
 AboutView = require 'views/about-view'
 template = require 'templates/layout'
+swappingtext = require 'lib/js/swappingtext.js'
 class Router extends Backbone.Router
   initialize: ->
     super

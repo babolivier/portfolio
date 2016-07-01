@@ -174,7 +174,7 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 
-buf.push("<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1.0, maximum-scale=1.0\"><title>Brunch gentleman's set</title><link rel=\"stylesheet\" href=\"stylesheets/app.css\"><script src=\"javascripts/app.js\"></script><script>$(function() {\n  require('initialize');\n})</script></head><body></body></html>");;return buf.join("");
+buf.push("<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1.0, maximum-scale=1.0\"><title>Brendan Abolivier - Engineering student</title><link rel=\"stylesheet\" href=\"stylesheets/app.css\"><script src=\"javascripts/app.js\"></script><script>$(function() {\n  require('initialize');\n})</script></head><body></body></html>");;return buf.join("");
 };
 if (typeof define === 'function' && define.amd) {
   define([], function() {
@@ -195,90 +195,7 @@ $(function() {
 });
 });
 
-;require.register("lib/js/loading.js", function(exports, require, module) {
-// To call once the document is loaded
-function loaded() {
-	var letter = $("#loading .letter");
-	// Finding out the block's inclination angle
-	var matrix = letter.css("transform");
-	if(matrix !== 'none') {
-    	var values = matrix.split('(')[1].split(')')[0].split(',');
-	    var a = values[0];
-	    var b = values[1];
-    	var angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
-	} else { var angle = 0; }
-	var inclination = (angle < 0) ? angle +=360 : angle;
-	// Calculating the remaining time
-	var time = 1.5-((inclination/360)*1.5)
-	// Finishing the current animation, then stopping it
-	letter.animate({
-		transform: "rotate(360)"
-	}, time*1000, function() {
-		letter.css("animation", "none");
-		letter.css("-webkit-animation", "none");
-		displayText();
-	});
-}
-
-// First, we display the whole logo
-function displayText() {
-	var logo = $("#loading .logo");
-	var name = $("#loading .name");
-    // Extending the zone to let the rest of the text fit in
-	logo.animate({
-		width: "410px"
-	}, 1500);
-    // After 500ms, start fading the name in
-	window.setTimeout(function() {
-		name.animate({
-			opacity: "1"
-		}, 2000, function() {
-			displayContent();
-		});
-	}, 500);
-}
-
-// Secondly, we switch to the website (sections and stuff)
-function displayContent() {
-	var loading_screen = $("#loading");
-	var sections = $("section");
-    // Transitioning to normal display
-	loading_screen.fadeOut(600);
-	window.setTimeout(function() {
-		sections.fadeIn(600);
-	}, 600);
-    rotateText();
-}
-
-
-// Use this function instead of "loaded" to skip all the loading animations
-// Very useful when working on the website
-function skipLoading() {
-    $("#loading").hide();
-    $("section").show();
-    rotateText();
-}
-});
-
-;require.register("lib/js/main.js", function(exports, require, module) {
-$(window).on("load", loaded);
-
-// When working on the portfolio, use this function to skip the loader
-//$(document).ready(skipLoading);
-
-// CSS animation to scroll smoothly between the sections when clicking
-// on a link in the navbar
-$(document).on("click", "#navbar a", function() {
-	$('html, body').animate(
-        {
-            scrollTop: $($(this).attr("href")).offset().top - 100
-        }
-    , 750);
-});
-
-});
-
-require.register("lib/js/swappingtext.js", function(exports, require, module) {
+;require.register("lib/js/swappingtext.js", function(exports, require, module) {
 // Want to add a line? Just add a row in the table
 var subtitles = [
         "Archlinux lover",
@@ -295,6 +212,8 @@ var subtitles = [
         "Wonderland seeker",
         "Faders pusher"
     ];
+
+var appearTimeout;
 
 // We need to have this variable global in order for rotateText() to
 // work correctly
@@ -315,7 +234,7 @@ function rotateText() {
 
 // Call this function to change the line only once, with no loop
 function swapText(newText, next) {
-    var div = $("#head .subtitle");
+    var div = $("#swappingtext");
     stripLastLetter(div, function() {
         // We tell stripLastLetter() to run textAppear() with the right
         // arguments once the text has been fully erased
@@ -343,11 +262,12 @@ function stripLastLetter(selector, next) {
 function textAppear(selector, newText, next) {
     var oldText = selector.text(),
         size = oldText.length;
+    window.clearTimeout(appearTimeout);
     selector.text(newText.substr(0, size+1));
     if(selector.text().length !== newText.length) {
         // If we have at least one letter of the new text not displayed,
         // we run the function again
-        window.setTimeout(function() {
+        appearTimeout = window.setTimeout(function() {
             textAppear(selector, newText, next);
         }, 100);
     } else {
@@ -357,10 +277,12 @@ function textAppear(selector, newText, next) {
     }
 }
 
+
+module.exports = rotateText;
 });
 
-;require.register("router.coffee", function(exports, require, module) {
-var AboutView, HeaderView, HomeView, Router, template,
+require.register("router.coffee", function(exports, require, module) {
+var AboutView, HeaderView, HomeView, Router, swappingtext, template,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
 
@@ -371,6 +293,8 @@ HomeView = require('views/home-view');
 AboutView = require('views/about-view');
 
 template = require('templates/layout');
+
+swappingtext = require('lib/js/swappingtext.js');
 
 Router = (function(superClass) {
   extend(Router, superClass);
@@ -419,7 +343,7 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 
-buf.push("<h1>Example about page</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>");;return buf.join("");
+buf.push("<div id=\"about\"><h1>About me</h1><img src=\"images/people/swag-closer.jpg\"/><p> \nHey there!<br>  \nMy name is <strong>Brendan Abolivier</strong>, and I'm a French student at <a href=\"http://www.isen.fr/\">ISEN</a>, an engineering school located in Brest (France), where I mainly study <strong>computer and network related stuff</strong>.<br>\nI'm a very <strong>curious</strong> guy, in every sense of the word. I love programming, systems administration, networks management, but I also have many interests outside of the IT field. I have some experience in volunteering, in music production, radio production, management... I'm even the <strong>co-founder</strong> (and current <strong>president</strong>) of a music-centered organisation named <strong><a href=\"http://www.trancendances.fr/\">Trancendances</a></strong>.<br>\nI'm very interested in <strong>discovering new people and practices</strong> (I love attending to conferences), new aspects of the fields I'm already playing in, or even <strong>new domains</strong> I don't have any relation with.<br>\nBack to IT, I've always been curious about how these <strong>new technologies</strong> we're living with more and more are working and interacting with our lifestyle. I also am involved in <strong>open-source communities</strong>, actively contributing to free software projects such as <a href=\"https://www.cozy.io/\">Cozy</a>.</p><img src=\"images/people/me.jpg\" class=\"moz\"/><p class=\"oss\">So far, <strong>open-source software</strong> has been an important part of my life. I'm a <strong>member of the <a href=\"https://www.fsf.org/\">Free Software Foundation</a></strong> and I strongly believe in the 4 freedom of free software (run, study, redistribute and improve).\nI made my first steps in open-source <strong>contributions</strong> during my internship in the startup <strong>Cozy</strong>, working on a project I still contribute to. Since then, I've contributed, either by feedback or code, to project such as <strong><a href=\"https://github.com/bnjbvr/kresus\">kresus</a></strong>, <strong><a href=\"https://brave.com/\">Brave</a></strong> or the <strong><a href=\"https://12mars.rsf.org/2016-en/\">Collateral Freedom</a></strong> initiative by <strong>Reporters Without Borders</strong>.\nI'm also working on some of <strong>Trancendances's own open-source projects</strong>, such as <a href=\"https://github.com/Trancendances/hermes\">Hermes</a>, a soon-to-be powerful bulk email sender.\nYou'll be able to find some of these contributions in the <a href=\"#contributions\">corresponding section</a>.</p></div>");;return buf.join("");
 };
 if (typeof define === 'function' && define.amd) {
   define([], function() {
@@ -438,7 +362,7 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 
-buf.push("<nav><a href=\"#\">Home</a><a href=\"#about\">About</a></nav>");;return buf.join("");
+buf.push("<section id=\"navbar\"><a href=\"#\"><div class=\"logo\"><div class=\"letter\">B</div><div class=\"name\"> \nBrendan<br/>Abolivier</div></div></a><a href=\"#\" class=\"navlink\">Home</a><a href=\"#about\" class=\"navlink\">About me</a><a href=\"#projects\" class=\"navlink\">Projects</a><a href=\"#contributions\" class=\"navlink\">Contributions</a><a href=\"#talks\" class=\"navlink\">Talks</a><a href=\"#contact\" class=\"navlink\">Contact</a><a href=\"http://static.brendanabolivier.com/cv.pdf\" target=\"blank\" class=\"navlink\">CV</a></section>");;return buf.join("");
 };
 if (typeof define === 'function' && define.amd) {
   define([], function() {
@@ -456,8 +380,8 @@ var __templateData = function template(locals) {
 var buf = [];
 var jade_mixins = {};
 var jade_interp;
-;var locals_for_with = (locals || {});(function (message) {
-buf.push("<h1>Example home page</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Pass variable</h3><p>" + (jade.escape(null == (jade_interp = message) ? "" : jade_interp)) + "</p>");}.call(this,"message" in locals_for_with?locals_for_with.message:typeof message!=="undefined"?message:undefined));;return buf.join("");
+
+buf.push("<div id=\"home\"><img src=\"images/people/me.jpg\"/><h1>Brendan Abolivier</h1><p id=\"swappingtext\"></p><a href=\"https://twitter.com/BrenAbolivier\">Twitter</a>&nbsp;/&nbsp;<a href=\"https://keybase.io/BrenAbolivier\">Keybase</a></div>");;return buf.join("");
 };
 if (typeof define === 'function' && define.amd) {
   define([], function() {
@@ -476,7 +400,7 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 
-buf.push("<header></header><section class=\"content\"></section>");;return buf.join("");
+buf.push("<header id=\"navbar\"></header><section class=\"content\"></section>");;return buf.join("");
 };
 if (typeof define === 'function' && define.amd) {
   define([], function() {
@@ -506,6 +430,10 @@ AboutView = (function(superClass) {
   AboutView.prototype.template = template;
 
   AboutView.prototype.el = false;
+
+  AboutView.prototype.afterRender = function() {
+    return $("body").css('background', '#fff');
+  };
 
   return AboutView;
 
@@ -540,11 +468,13 @@ module.exports = HeaderView;
 });
 
 ;require.register("views/home-view.coffee", function(exports, require, module) {
-var HomeView, template,
+var HomeView, swappingtext, template,
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty;
 
 template = require('templates/home');
+
+swappingtext = require('lib/js/swappingtext.js');
 
 HomeView = (function(superClass) {
   extend(HomeView, superClass);
@@ -557,10 +487,9 @@ HomeView = (function(superClass) {
 
   HomeView.prototype.el = false;
 
-  HomeView.prototype.serialize = function() {
-    return {
-      message: 'Hello World'
-    };
+  HomeView.prototype.afterRender = function() {
+    $("body").css('background', '#29274e');
+    return swappingtext();
   };
 
   return HomeView;

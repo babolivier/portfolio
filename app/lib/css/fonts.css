@@ -1,32 +1,32 @@
 @font-face {
 	font-family: "Raleway";
 	font-weight: 200;
-	src: local("Raleway ExtraLight"), url("../assets/fonts/raleway_200.woff2") format("woff2");
+	src: local("Raleway ExtraLight"), url("../fonts/raleway_200.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Raleway";
 	font-weight: 300;
-	src: local("Raleway Light"), url("../assets/fonts/raleway_300.woff2") format("woff2");
+	src: local("Raleway Light"), url("../fonts/raleway_300.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Raleway";
 	font-weight: 400;
-	src: local("Raleway"), url("../assets/fonts/raleway_400.woff2") format("woff2");
+	src: local("Raleway"), url("../fonts/raleway_400.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Lobster Two";
-	src: local("Lobster Two"), url("../assets/fonts/lobstertwo.woff2") format("woff2");
+	src: local("Lobster Two"), url("../fonts/lobstertwo.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Roboto";
-	src: local("Roboto-Light"), url("../assets/fonts/Roboto-Light.ttf");
+	src: local("Roboto-Light"), url("../fonts/Roboto-Light.ttf");
 }
 
 @font-face {
 	font-family: "Lato";
-	src: local("Lato-Light"), url("../assets/fonts/latolight.woff2") format("woff2");
+	src: local("Lato-Light"), url("../fonts/latolight.woff2") format("woff2");
 }

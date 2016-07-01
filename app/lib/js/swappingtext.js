@@ -15,6 +15,8 @@ var subtitles = [
         "Faders pusher"
     ];
 
+var appearTimeout;
+
 // We need to have this variable global in order for rotateText() to
 // work correctly
 var i;
@@ -34,7 +36,7 @@ function rotateText() {
 
 // Call this function to change the line only once, with no loop
 function swapText(newText, next) {
-    var div = $("#head .subtitle");
+    var div = $("#swappingtext");
     stripLastLetter(div, function() {
         // We tell stripLastLetter() to run textAppear() with the right
         // arguments once the text has been fully erased
@@ -62,11 +64,12 @@ function stripLastLetter(selector, next) {
 function textAppear(selector, newText, next) {
     var oldText = selector.text(),
         size = oldText.length;
+    window.clearTimeout(appearTimeout);
     selector.text(newText.substr(0, size+1));
     if(selector.text().length !== newText.length) {
         // If we have at least one letter of the new text not displayed,
         // we run the function again
-        window.setTimeout(function() {
+        appearTimeout = window.setTimeout(function() {
             textAppear(selector, newText, next);
         }, 100);
     } else {
@@ -75,3 +78,6 @@ function textAppear(selector, newText, next) {
         window.setTimeout(next, 1000);
     }
 }
+
+
+module.exports = rotateText;
