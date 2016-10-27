@@ -19,7 +19,7 @@ body {
     margin: 0px;
 }
 
-section {
+section, footer {
     display: none;
     overflow: hidden;
     width:75%;
@@ -34,7 +34,8 @@ section {
 section h2 {
     text-align:center;
     padding:30px;
-    font-size:170%;
+    padding-top: 50px;
+    font-size:210%;
 }
 
 a, a:visited {
@@ -168,13 +169,17 @@ a:hover {
 /* About style */
 
 #about .photo {
-    width:200px;
-    height:200px;
+    width:230px;
+    height:230px;
     border-radius:100%;
     background:url('../assets/people/me.jpg');
     background-size:100% !important;
     float:left;
     margin-right:20px;
+}
+
+#about p {
+    font-size: 110%;
 }
 
 /* Recommendations style */
@@ -241,6 +246,105 @@ a:hover {
     text-align:center;
 }
 
+/* Projects style */
+
+#projects .line {
+    text-align:center;
+    margin-bottom:70px;
+}
+
+#projects article {
+    width:22.1%;
+    display:inline-block;
+    margin-left:3%;
+    margin-right:3%;
+    vertical-align:top;
+    text-align:center;
+}
+
+#projects article img {
+    max-width:100%;
+    max-height:200px;
+    border-radius: 100px;
+}
+
+#projects article div {
+   /* I'm containing an image! */
+    height:200px; /* Fixed height so the text is at the same level for each block */
+    text-align:center;
+}
+
+#projects .tech:before {
+    content: "Technologies: ";
+    font-weight: bold;
+}
+
+/* Contact form style */
+
+#contact input[type="text"], #contact input[type="email"], #contact textarea {
+    /* This is a copy-paste from the style at 
+    https://www.trancendances.fr/contact */
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background-color: white;
+    font-family: inherit;
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    font-size: 1em;
+    margin: 0 0 1.14286em 0;
+    padding: 0.57143em;
+    height: 2.64286em;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+    -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+    transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+#contact label, #contact p {
+    font-size: 120%;
+}
+
+#contact #form_status {
+    text-align: center;
+}
+
+#contact #form_name {
+	width: 50%;
+	float: left;
+}
+
+#contact #form_addr {
+	width: 49%;
+	float: right;
+}
+
+#contact #form_text #form_text_textarea {
+	height: 150px;
+}
+
+#contact #form_subm {
+    text-align: right;
+}
+
+#contact #form_subm_btn {
+    font-size: 110%;
+}
+
+/* Footer style */
+
+footer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
 /* Replacing Bootstrap's CSS */
 .collapse {
     display:none;
@@ -256,7 +360,7 @@ a:hover {
     transition-duration: 0.35s;
     transition-property: height, visibility;
 }
-.btn {
+.btn, #form_subm_btn {
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0px;
@@ -272,7 +376,7 @@ a:hover {
     border: 1px solid transparent;
     border-radius: 4px;
 }
-.btn-default {
+.btn-default, #form_subm_btn {
     color: #333;
     background-color: #FFF;
     border-color: #CCC;

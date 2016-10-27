@@ -10,6 +10,7 @@
         <script src="js/bootstrap.js"></script>
         <script src="js/swappingtext.js"></script>
         <script src="js/loading.js"></script>
+        <script src="http://localhost:1970/form.js" charset="utf-8"></script>
         <!-- Well, maybe we'll need this one day
         <script src="js/lang.js"></script>
         -->
@@ -34,8 +35,8 @@
                 <li><a onClick="return false" href="#about">about:me</a></li>
                 <li><a onClick="return false" href="#experiences">Experiences</a></li>
                 <li><a onClick="return false" href="#projects">Projects</a></li>
-                <li><a onClick="return false" href="#skills">Skills</a></li>
                 <li><a onClick="return false" href="#contact">Contact</a></li>
+                <li><a href="http://static.brendanabolivier.com/cv.pdf" target="_blank">CV</a></li>
             </ul>
         </section>
         <section id="placeholder"></section>
@@ -48,20 +49,27 @@
             <div class="photo"></div>
             <p>Hey there!<br>
             My name is Brendan Abolivier, and I'm a French student at <a href="http://www.isen.fr/">ISEN</a>, an engineering school located in Brest (France), where I mainly study software engineering.<br>
-            I'm a very curious guy, in every sense of the word. I love programming, systems administration, networks management, but I also have many interests outside of the IT field. I have some experience in volunteering, in music production, radio production, management... I'm even the co-founder (and current president) of a music-centered organisation named <a href="http://www.trancendances.fr/">Trancendances</a>!<br>
+            I'm a very curious guy, in every sense of the word. I love programming, systems administration, networks management, but I also have many interests outside of the IT field. I have some experience in volunteering, in music production, radio production, management... I'm even the co-founder (and current president) of a music-centered non-profit organisation named <a href="http://www.trancendances.fr/">Trancendances</a>!<br>
             I'm very interested in discovering new people and practices (I love attending to conferences), new aspects of the fields I'm already playing in, or even new domains I don't have any relation with.<br>
-            Back to IT, I've always been curious about how these new technologies we're living with more and more are working and interacting with our lifestyle. I also am involved in open-source communities, actively contributing to free software projects such as <a href="https://www.cozy.io/">Cozy</a>.<br>
+            Back to IT, I've always been curious about how these new technologies we're living with more and more are working and interacting with our lifestyle. I also am involved in open-source communities, actively contributing to free software projects.<br>
             I hope you will be able to discover me during your browsing of this website, so have a pleasant one!</p>
         </section>
         <section id="experiences">
             <h2>Experiences</h2>
             <div class="line">
-                   <article>
+                <article>
+                    <div><img src="assets/companies/swbrest.png" alt="Startup Weekend Brest" /></div>
+                    <h3>Startup Weekend Brest</h3>
+                    <p class="subtitle">2016 - Intern</p>
+                    <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#descSW" aria-expanded="false" aria-controls="descSP">More infos</button>
+                    <p class="collapse" id="descSW">In 2016, I had the opportunity to join the team of volunteers in charge of the Brest Startup Weekend.</p>
+                </article>
+                <article>
                     <div><img src="assets/companies/tvn.png" alt="Thomson Video Networks" /></div>
                     <h3>Thomson Video Networks</h3>
-                    <p class="subtitle">2015-present - Part-time intern</p>
+                    <p class="subtitle">2015-2016 - Part-time intern</p>
                     <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#descTVN" aria-expanded="false" aria-controls="descTVN">More infos</button>
-                    <p class="collapse" id="descTVN">In the context of my studies, I'm currently working as a part-time intern at Thomson Video Networks, one of the leader for video and audio processing. During this internship, I'm working on format conversion for video feeds.</p>
+                    <p class="collapse" id="descTVN">In the context of my studies, have been working as a part-time intern at Thomson Video Networks, one of the leader for video and audio processing. During this internship, I was working on format conversion for video feeds.</p>
                 </article>
                 <article>
                     <div><img src="assets/companies/cozy.png" alt="Cozy Cloud" /></div>
@@ -70,6 +78,8 @@
                     <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#descCozy" aria-expanded="false" aria-controls="descCozy">More infos</button>
                     <p class="collapse" id="descCozy">I have worked ten weeks as an intern in the start-up Cozy Cloud, during which I worked on a Node.JS application for the Cozy platform.</p>
                 </article>
+            </div>
+            <div class="line">
                 <article>
                     <div><img src="assets/companies/secourspop.png" alt="Secours populaire français" /></div>
                     <h3>Secours populaire français</h3>
@@ -77,9 +87,7 @@
                     <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#descSP" aria-expanded="false" aria-controls="descSP">More infos</button>
                     <p class="collapse" id="descSP">I joined the team of volunteers at the non-profit organisation "Secours populaire français" for two weeks. I was in charge of a vacation day for the people not able to afford going on holiday.</p>
                 </article>
-            </div>
-            <div class="line">
-                   <article>
+                <article>
                     <div><img src="assets/companies/isen.png" alt="ISEN" /></div>
                     <h3>ISEN Brest</h3>
                     <p class="subtitle">2013-present - Student</p>
@@ -96,75 +104,70 @@
             </div>
         </section>
         <section id="projects">
-            <h2>Projects</h2>
-            <article>
-                <img src="assets/projects/burgerquizz.jpg" alt="Burger Quizz" />
-                <h3>Burger Quizz</h3>
-                <div class="description">
-                    <p>As a school project, we had to work, in groups of two, on a web adaptation of "Burger Quizz", an old TV game. I worked with <a href="http://www.josephcaillet.fr/">Joseph Caillet</a> on this application, written in HTML5, CSS3 and JavaScript, with a JSON API written in PHP, a Node.JS script handling the multiplayer mode, and a Java application managing the database's content.</p>
-                    <a href="http://burgerquizz.brendanabolivier.com/">Try it</a>
-                    <a href="https://github.com/babolivier/burger-quizz">View on Github</a>
-                </div>
-            </article>
-            <article>
-                <img src="assets/projects/bombercir.jpg" alt="BomberCIR" />
-                <h3>BomberCIR</h3>
-                <div class="description">
-                    <p>With four of my classmates, we created a web platform game inspired by Bomberman for the "Game of CIR" contest organised by our school (ISEN Brest), which aimed in showing the skills brought by the CIR (Cycle Informatique et Réseaux) curriculum, which is mainly focused on IT and networking. The game is written in HTML5, CSS3 and JavaScript, and is based on the Phaser JavaScript framework. It also comes with a Java application acting as an initiation to computer programming. Our game reached the first place in the contest, with a €250 prize.</p>
-                    <a href="http://evanguelard.fr/BomberCIR/">Try and download the game</a>
-                </div>
-            </article>
-            <article>
-                <img src="assets/projects/newsletter-trancendances.jpg" alt="Newsletter sending system" />
-                <h3>Newsletter sending system</h3>
-                <div class="description">
-                    <p>Trancendances started its newsletter service in January 2015, which needed to be sent automatically to the subscribers. I wrote this system in PHP, with the PEAR librairies, and support of multipart emails (HTML+plain text) and secured and encrypted SMTP authentication. I also had to design a simple but efficient mail template which is used for every newsletter, written in HTML and CSS, with compatibility for the most used e-mail clients.</p>
-                    <a href="http://mailing.trancendances.fr/archives/">Read some newsletters</a>
-                </div>
-            </article>
-            <article>
-                <img src="assets/projects/agenda-tr.jpg" alt="Events agenda" />
-                <h3>Events agenda</h3>
-                <div class="description">
-                    <p>In order to approach the event business, but also according to its aim to share trance music in France, the Trancendances organization needed the development of an agenda dedicated to trance events in France. I developped this agenda in PHP, and integrated it within the already installed CMS (AnchorCMS), which needed to study and adapt my work to the existing product.</p>
-                    <a href="http://www.trancendances.fr/agenda">Browse online</a>
-                </div>
-            </article>
-            <article>
-                <img src="assets/projects/pandq.jpg" alt="P &amp; Q" />
-                <h3>P &amp; Q</h3>
-                <div class="description">
-                    <p>At the end of my first year at ISEN, we had to work by pair on a static website for a fictional start-up. We named our fictional start-up "P &amp; Q" (for "Paper &amp; Quality), and its product was high quality toilet paper.</p>
-                    <a href="http://p-and-q.brendanabolivier.com/">Brows online</a>
-                </div>
-            </article>
-            <article>
-                <img src="assets/projects/afm29.jpg" alt="AFM 29" />
-                <h3>AFM 29</h3>
-                <div class="description">
-                    <p>I've been asked to realise and set up the website of a local computer repair company, AFM 29 (Assistance Finistère Micro). I started from an AnchorCMS installation in order to develop this website, the request being a lightweight and simple website, with the possibility for the customer to easily edit its content.</p>
-                </div>
-            </article>
-            <article>
-                <img src="assets/projects/outoftime.jpg" alt="Out of time" />
-                <h3>Out of time</h3>
-                <div class="description">
-                    <p>With a group of six other students, I took part in the realisation of "Out of time", a short movie, during our studies, following the topic "Lived time". Its message is that time spent within a game (including but not only video games) is lived indirectly through the game, almost by proxy.</p>
-                    <a href="https://www.youtube.com/watch?v=x2YOzcdB2HA">Watch online</a>
-                </div>
-            </article>
-            <article>
-                <img src="assets/projects/robot-cir1.jpg" alt="Firefighter robot" />
-                <h3>Firefighter robot</h3>
-                <div class="description">
-                    <p>For the algorithm school project at the end of my first year at ISEN, I had to develop a firefighter robot simulation. This robot had to be able to take action in case of fire in an appartment, already knowing the appartment's map and the fire extinguisher's position in it, but not the fire's.</p>
-                </div>
-            </article>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
+            <div class="line">
+                <h2>Projects</h2>
+                <article>
+                    <img src="assets/projects/smam.jpg" alt="SMAM (Send Me A Mail)" />
+                    <h3>Send Me A Mail</h3>
+                    <div class="description">
+                        <p>I developped a free contact form embedding software (used on this portfolio) based on Nodemailer from a need some friends and I had. According to my beliefs in freedom of software, I made this project free, usable and hostable by everyone.</p>
+                        <p class="tech">Node.JS, HTML, CSS, JavaScript</p>
+                        <a class="btn btn-default" role="button" href="https://github.com/babolivier/smam" target="_blank">View on GitHub</a>
+                    </div>
+                </article>
+                <article>
+                    <img src="assets/projects/tof.jpg" alt="Trancendances Online Festival" />
+                    <h3>Trancendances Online Festival</h3>
+                    <div class="description">
+                        <p>In september 2016, Trancendances organised the first edition of the Trancendances Online Festival, a music festival inspired from the biggest music events from all around the world, entirely on the web. This needed to set up a whole infrastructure, which I handled.</p>
+                        <p class="tech">Haproxy, Caddy, Icecast2, MPD, JavaScript</p>
+                        <a class="btn btn-default" role="button" href="https://github.com/Trancendances/online-festival" target="_blank">View on GitHub</a>
+                    </div>
+                </article>
+                <article>
+                    <img src="assets/projects/collateralfreedom.jpg" alt="RSF Censorship Detector" />
+                    <h3>RSF Censorship Detector</h3>
+                    <div class="description">
+                        <p>In february 2016, I took part in a hackaton organised by Reporters Without Borders for their annual initiative Collateral Freedom. Together with <a href="http://32b6.com/">Clément Salaün</a>, we wrote a browser extension allowing more people to access a web more free.</p>
+                        <p class="tech">WebExtensions, HTML, CSS, JavaScript</p>
+                        <a class="btn btn-default" role="button" href="https://chrome.google.com/webstore/detail/rsf-censorship-detector/dfccaccafebmbiblhjfbjlpcbodfmpmp" target="_blank">Chrome Webstore</a>
+                        <a class="btn btn-default" role="button" href="https://addons.mozilla.org/en-US/firefox/addon/rsf-censorship-detector/" target="_blank">Mozilla Add-ons</a>
+                        <a class="btn btn-default" role="button" href="https://github.com/babolivier/collateral-freedom" target="_blank">View on GitHub</a>
+                    </div>
+                </article>
+            </div>
+            <div class="line">    
+                <article>
+                    <img src="assets/projects/burgerquizz.jpg" alt="Burger Quizz" />
+                    <h3>Burger Quizz</h3>
+                    <div class="description">
+                        <p>As a school project, we had to work, in groups of two, on a web adaptation of "Burger Quizz", an old TV game. I worked with <a href="http://www.josephcaillet.fr/">Joseph Caillet</a> on this application, with a JSON API written in PHP, a Node.JS script handling the multiplayer mode, and a Java application managing the database's content.</p>
+                        <p class="tech">HTML, CSS, JavaScript, Node.JS, PHP, REST, JSON, MySQL, Java</p>
+                        <a class="btn btn-default" role="button" href="http://burgerquizz.brendanabolivier.com/" target="_blank">Try it</a>
+                        <a class="btn btn-default" role="button" href="https://github.com/babolivier/burger-quizz" target="_blank">View on Github</a>
+                    </div>
+                </article>
+                <article>
+                    <img src="assets/projects/bombercir.jpg" alt="BomberCIR" />
+                    <h3>BomberCIR</h3>
+                    <div class="description">
+                        <p>With four of my classmates, we created a web platform game for the "Game of CIR" contest organised by our school (ISEN Brest), which aimed at showing the skills brought by the curriculum I was in. It comes with a Java application acting as an initiation to computer programming. Our game reached the first place in the contest, with a €250 prize.</p>
+                        <p class="tech">JavaScript, Phaser</p>
+                        <a class="btn btn-default" role="button" href="https://github.com/EvanGuelard/BomberCIR" target="_blank">View on GitHub</a>
+                    </div>
+                </article>
+            </div>
         </section>
         <section id="contact">
+            <h2>Contact</h2>
+            <form id="smam"></form>
+            <script type="text/javascript">
+                generateForm("smam");
+            </script>
         </section>
+        <footer>
+            CC-BY-SA-NC Brendan Abolivier<br />
+            This website respects your privacy.
+        </footer>
     </body>
 </html>

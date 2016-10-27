@@ -44,6 +44,7 @@ function displayText() {
 function displayContent() {
 	var loading_screen = $("#loading");
 	var sections = $("section");
+    sections.push($("footer")[0]);
     // Transitioning to normal display
 	loading_screen.fadeOut(600);
 	window.setTimeout(function() {
