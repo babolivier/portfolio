@@ -279,6 +279,33 @@ a:hover {
     font-weight: bold;
 }
 
+/* Talks style */
+
+#talks .line {
+    text-align:center;
+    margin-bottom:10px;
+}
+
+#talks article {
+    width:22.1%;
+    display:inline-block;
+    margin-left:3%;
+    margin-right:3%;
+    vertical-align:top;
+    text-align:center;
+}
+
+#talks article img {
+    max-width:100%;
+    max-height:200px;
+}
+
+#talks article div {
+   /* I'm containing an image! */
+    height:200px; /* Fixed height so the text is at the same level for each block */
+    text-align:center;
+}
+
 /* Contact form style */
 
 #contact input[type="text"], #contact input[type="email"], #contact textarea {
