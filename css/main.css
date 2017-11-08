@@ -308,6 +308,11 @@ a:hover {
 
 /* Contact form style */
 
+#contact p {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 #contact input[type="text"], #contact input[type="email"], #contact textarea {
     /* This is a copy-paste from the style at
     https://www.trancendances.fr/contact */

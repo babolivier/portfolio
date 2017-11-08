@@ -221,8 +221,17 @@
         </section>
         <section id="contact">
             <h2>Contact</h2>
+            <p>You can drop me an email at <a href="" id="contactEmail"></a> or use the form below.</p>
             <form id="smam"></form>
             <script type="text/javascript">
+                let email = [
+                    "contact",
+                    "@",
+                    "brendanabolivier.com",
+                ].join('');
+                let a = document.querySelector("#contactEmail");
+                a.href = "mailto:" + email + "?subject=Contact from www.brendanabolivier.com";
+                a.innerHTML = email;
                 generateForm("smam");
             </script>
         </section>
