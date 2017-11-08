@@ -79,7 +79,7 @@ a:hover {
 }
 
 #loading .logo {
-    width:150px; 
+    width:150px;
     height:150px;
     margin:auto;
     padding-top:16%;
@@ -223,7 +223,7 @@ a:hover {
 
 #experiences .line {
     text-align:center;
-    margin-bottom:10px;
+    margin-bottom:30px;
 }
 
 #experiences article {
@@ -309,7 +309,7 @@ a:hover {
 /* Contact form style */
 
 #contact input[type="text"], #contact input[type="email"], #contact textarea {
-    /* This is a copy-paste from the style at 
+    /* This is a copy-paste from the style at
     https://www.trancendances.fr/contact */
     -webkit-appearance: none;
     -webkit-border-radius: 0;
